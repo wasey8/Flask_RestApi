@@ -210,6 +210,7 @@ def github(githubuser):
     var=res.json()
     var1=res1.json()
     Residence=var['location']
+    Avatar=var['avatar_url']
     repos=var['public_repos']
     followers=var['followers']
     following=var['following']
@@ -237,6 +238,7 @@ def github(githubuser):
         "Residence":Residence,
         "repo_names":repo_name,
         "user_url":url,
+        "avatar":Avatar
         }
         return jsonify(json)
 
